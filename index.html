@@ -4,15 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agnivah - EdTech Platform</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Welcome to Agnivah!</h1>
-    <p>This is your EdTech platform where we offer:</p>
-    <ul>
-        <li>🔥 Professional Courses</li>
-        <li>📄 CV Builder</li>
-        <li>🤖 AI Solutions for Corporates</li>
-    </ul>
-    <p>We are currently under construction 🚀. Stay tuned!</p>
+    <header>
+        <h1>Welcome to Agnivah</h1>
+        <nav>
+            <ul>
+                <li><a href="#cv-analyzer">CV Analyzer</a></li>
+                <li><a href="#chatbot">Career Guidance AI</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#jobs">Job Matching</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="cv-analyzer">
+        <h2>CV Analyzer (SaaS)</h2>
+        <p>Upload your CV and get AI-powered insights for job matching.</p>
+        <input type="file" id="cvUpload" />
+        <button onclick="analyzeCV()">Analyze</button>
+    </section>
+    
+    <section id="chatbot">
+        <h2>Career Guidance AI</h2>
+        <p>Chat with our AI to get career advice and guidance.</p>
+        <button onclick="startChatbot()">Chat Now</button>
+    </section>
+    
+    <section id="courses">
+        <h2>Explore Courses</h2>
+        <p>Learn new skills with our curated courses. Payment integration coming soon!</p>
+        <button>View Courses</button>
+    </section>
+    
+    <section id="jobs">
+        <h2>Job Matching AI</h2>
+        <p>Our AI recommends jobs based on your skills and CV.</p>
+        <button>Find Jobs</button>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Agnivah. All rights reserved.</p>
+    </footer>
+    
+    <script src="script.js"></script>
 </body>
 </html>

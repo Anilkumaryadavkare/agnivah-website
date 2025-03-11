@@ -1,71 +1,50 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agnivah - Empowering Careers</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <nav>
-            <div class="logo">Agnivah</div>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#courses">Courses</a></li>
-                <li><a href="#cv-builder">CV Builder</a></li>
-                <li><a href="#solutions">AI Solutions</a></li>
-                <li><a href="#contact">Contact Us</a></li>
-            </ul>
-        </nav>
-    </header>
+document.addEventListener('DOMContentLoaded', function() {
+    // Show the welcome popup automatically
+    const popup = document.getElementById('popup');
+    popup.style.display = 'block';
 
-    <section id="home">
-        <h1>Empowering Careers with AI</h1>
-        <p>Your journey to a better career starts here. Enroll in courses, build your CV, or explore AI-driven solutions.</p>
-        <button onclick="openChatbot()">Get Career Guidance</button>
-    </section>
+    // Open Chatbot after 5 seconds of page load
+    setTimeout(() => {
+        openChatbot();
+    }, 5000);
+});
 
-    <section id="courses">
-        <h2>Explore Our Courses</h2>
-        <p>Enhance your skills with our industry-relevant courses.</p>
-    </section>
+// Function to open the chatbot
+function openChatbot() {
+    const chatbot = document.getElementById('chatbot');
+    chatbot.style.display = 'block';
+}
 
-    <section id="cv-builder">
-        <h2>Build Your CV</h2>
-        <p>Our AI-powered CV builder helps you craft the perfect resume.</p>
-    </section>
+// Function to close the chatbot
+function closeChatbot() {
+    const chatbot = document.getElementById('chatbot');
+    chatbot.style.display = 'none';
+}
 
-    <section id="solutions">
-        <h2>AI Solutions for Corporates</h2>
-        <p>We build AI solutions tailored for corporate use cases.</p>
-    </section>
+// Function to close the popup
+function closePopup() {
+    const popup = document.getElementById('popup');
+    popup.style.display = 'none';
+}
 
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>Reach out to us for any queries or support.</p>
-    </section>
+// Interactive Chatbot Functionality
+const chatBody = document.querySelector('.chat-body');
 
-    <!-- Chatbot Popup -->
-    <div class="chatbot" id="chatbot">
-        <div class="chat-header">
-            <h3>Chat with us</h3>
-            <button onclick="closeChatbot()">X</button>
-        </div>
-        <div class="chat-body">
-            <p>Hello! How can we assist you today?</p>
-        </div>
-    </div>
+function simulateBotReply(message) {
+    const reply = document.createElement('p');
+    reply.textContent = `Bot: ${message}`;
+    chatBody.appendChild(reply);
+}
 
-    <!-- Popup on Page Load -->
-    <div class="popup" id="popup">
-        <div class="popup-content">
-            <h2>Welcome to Agnivah</h2>
-            <p>We are here to boost your career with AI-driven solutions.</p>
-            <button onclick="closePopup()">Get Started</button>
-        </div>
-    </div>
+function sendMessage() {
+    const userInput = prompt('How can we assist you today?');
+    if (userInput) {
+        const userMessage = document.createElement('p');
+        userMessage.textContent = `You: ${userInput}`;
+        chatBody.appendChild(userMessage);
 
-    <script src="script.js"></script>
-</body>
-</html>
+        setTimeout(() => {
+            simulateBotReply('Thank you for reaching out! Our team will connect with you shortly.');
+        }, 1000);
+    }
+}

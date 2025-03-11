@@ -1,50 +1,31 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Show the welcome popup automatically
-    const popup = document.getElementById('popup');
-    popup.style.display = 'block';
-
-    // Open Chatbot after 5 seconds of page load
-    setTimeout(() => {
-        openChatbot();
-    }, 5000);
-});
-
-// Function to open the chatbot
-function openChatbot() {
-    const chatbot = document.getElementById('chatbot');
-    chatbot.style.display = 'block';
-}
-
-// Function to close the chatbot
-function closeChatbot() {
-    const chatbot = document.getElementById('chatbot');
-    chatbot.style.display = 'none';
-}
-
-// Function to close the popup
-function closePopup() {
-    const popup = document.getElementById('popup');
-    popup.style.display = 'none';
-}
-
-// Interactive Chatbot Functionality
-const chatBody = document.querySelector('.chat-body');
-
-function simulateBotReply(message) {
-    const reply = document.createElement('p');
-    reply.textContent = `Bot: ${message}`;
-    chatBody.appendChild(reply);
-}
-
-function sendMessage() {
-    const userInput = prompt('How can we assist you today?');
-    if (userInput) {
-        const userMessage = document.createElement('p');
-        userMessage.textContent = `You: ${userInput}`;
-        chatBody.appendChild(userMessage);
-
-        setTimeout(() => {
-            simulateBotReply('Thank you for reaching out! Our team will connect with you shortly.');
-        }, 1000);
+// CV Analyzer Function
+function analyzeCV() {
+    const fileInput = document.getElementById('cvUpload');
+    if (fileInput.files.length === 0) {
+        alert('Please upload a CV to analyze.');
+        return;
     }
+    alert('Your CV is being analyzed! Stay tuned for insights.');
 }
+
+// Chatbot Pop-up Control
+document.addEventListener("DOMContentLoaded", function () {
+    const chatBtn = document.getElementById("chatbot-btn");
+    const chatPopup = document.getElementById("chat-popup");
+    const closeChat = document.getElementById("close-chat");
+
+    // Show Chatbot Pop-up
+    chatBtn.addEventListener("click", () => {
+        chatPopup.style.display = "block";
+    });
+
+    // Close Chatbot Pop-up
+    closeChat.addEventListener("click", () => {
+        chatPopup.style.display = "none";
+    });
+
+    // Pop-up greeting on site visit
+    setTimeout(() => {
+        alert("Welcome to Agnivah! How can we assist you today?");
+    }, 1000);
+});

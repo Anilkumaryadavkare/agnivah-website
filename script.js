@@ -29,3 +29,4 @@ document.addEventListener("DOMContentLoaded", function () {
         alert("Welcome to Agnivah! How can we assist you today?");
     }, 1000);
 });
+

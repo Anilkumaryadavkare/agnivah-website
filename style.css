@@ -1,106 +1,68 @@
-/* Global Styles */
-* {
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f9;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
 }
 
-body {
-    background-color: #f4f4f4;
-    color: #333;
-}
-
-/* Header Section */
-header {
-    background-color: #003366;
+.banner {
+    background-color: #002D72;
     color: #fff;
-    padding: 20px 0;
+    padding: 40px 20px;
     text-align: center;
 }
 
-header h1 {
-    font-size: 2.5rem;
+.hero-section {
+    background: #E3EDF7;
+    text-align: center;
+    padding: 20px;
 }
 
-nav {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 15px;
+.cv-analyzer,
+.career-guidance {
+    background: #ffffff;
+    padding: 30px;
+    margin: 20px auto;
+    width: 80%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
 }
 
-nav a {
+button {
+    background-color: #002D72;
     color: #fff;
-    text-decoration: none;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+button:hover {
+    background-color: #004BA8;
+}
+
+/* Chatbot Pop-up */
+.chat-popup {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    border: 2px solid #004BA8;
+    overflow: hidden;
+}
+
+.chat-header {
+    background-color: #004BA8;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
     font-weight: bold;
-    transition: all 0.3s;
 }
 
-nav a:hover {
-    color: #ff9900;
-}
-
-/* Hero Section */
-.hero {
-    background-image: url('assets/hero-bg.jpg');
-    background-size: cover;
-    background-position: center;
-    color: #fff;
-    padding: 100px 0;
-    text-align: center;
-}
-
-.hero h2 {
-    font-size: 3rem;
-    margin-bottom: 15px;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-}
-
-.hero .cta-button {
-    background-color: #ff9900;
-    color: #fff;
-    padding: 15px 40px;
-    text-decoration: none;
-    font-size: 1.2rem;
-    border-radius: 5px;
-    transition: all 0.3s;
-}
-
-.hero .cta-button:hover {
-    background-color: #cc7a00;
-}
-
-/* Sections */
-section {
-    padding: 60px 20px;
-    text-align: center;
-}
-
-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-section p {
-    font-size: 1.1rem;
-    max-width: 900px;
-    margin: 0 auto 40px;
-}
-
-/* Footer */
-footer {
-    background-color: #003366;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-    margin-top: 50px;
-}
-
-footer p {
-    font-size: 0.9rem;
+.chat-body {
+    padding: 15px;
 }

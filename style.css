@@ -1,6 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f9;
+    margin: 0;
+    padding: 0;
+}
 
+.banner {
+    background-color: #002D72;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
 
-;
+.hero-section {
+    background: #E3EDF7;
+    text-align: center;
+    padding: 20px;
+}
+
+.cv-analyzer,
+.career-guidance {
+    background: #ffffff;
+    padding: 30px;
+    margin: 20px auto;
+    width: 80%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+}
+
+button {
+    background-color: #002D72;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+button:hover {
+    background-color: #004BA8;
+}
+
+/* Chatbot Pop-up */
+.chat-popup {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    border: 2px solid #004BA8;
+    overflow: hidden;
+}
+
+.chat-header {
+    background-color: #004BA8;
+    color: #fff;
     padding: 10px;
     text-align: center;
     font-weight: bold;
